@@ -984,7 +984,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 0, 25, -0.45 } // PINDA V2 On Afterburner
+#define NOZZLE_TO_PROBE_OFFSET { 0, 25, -0.43 } // PINDA V2 On Afterburner
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1283,7 +1283,7 @@
   // Set the number of grid points per dimension.
   // Because the Prusa MK3s bed is wider than longer (x > y) we use 5 for X and 4 for Y
   #define GRID_MAX_POINTS_X 5
-  #define GRID_MAX_POINTS_Y 4
+  #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   // Probe along the Y axis, advancing X after each column
   //#define PROBE_Y_FIRST

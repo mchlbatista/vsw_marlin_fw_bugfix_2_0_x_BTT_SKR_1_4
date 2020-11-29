@@ -13,7 +13,7 @@ G29
 
 G90 ; use absolute coordinates
 M83 ; extruder relative mode
-G1 X70 Y-3 F8000 ; Move to a position in the left front of the bed
+G1 X82.5 Y-3 F8000 ; Move to a position in the left front of the bed
 G1 Z0.6; Move nozzle above 0.6 mm of the bed
 G91 ; Use relative mode
 
