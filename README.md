@@ -1,6 +1,6 @@
 # Voron Switchwire
 
-Marlin bugfix 2.0.7 optimized for Voron [Switchwire](https://vorondesign.com/voron_switchwire)
+Marlin bugfix 2.0.7 optimized for [Voron Switchwire](https://vorondesign.com/voron_switchwire)
 
 # Marlin 3D Printer Firmware
 
