@@ -809,8 +809,8 @@
  *   https://blog.kyneticcnc.com/2018/10/computing-junction-deviation-for-marlin.html
  */
 #if DISABLED(CLASSIC_JERK)
-  // JUNCTION_DEVIATION_MM updated with Prusa Marlin value of 0.1
-  #define JUNCTION_DEVIATION_MM 0.1 //0.013 // (mm) Distance from real junction edge
+  // HAs to be calculate https://www.3dmakerengineering.com/blogs/3d-printing/velocity-acceleration-jerk-and-junction-deviation 
+  #define JUNCTION_DEVIATION_MM 0.0256 //0.013 // (mm) Distance from real junction edge
   #define JD_HANDLE_SMALL_SEGMENTS    // Use curvature estimation instead of just the junction angle
                                       // for small segments (< 1mm) with large junction angles (> 135°).
 #endif
@@ -1126,10 +1126,10 @@
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 // Corrections for Prusa MK3s Bed x250 y210
-#define X_MIN_POS 0
+#define X_MIN_POS -2
 #define Y_MIN_POS -15
 #define Z_MIN_POS 0
-#define X_MAX_POS X_BED_SIZE
+#define X_MAX_POS X_BED_SIZE + (X_MIN_POS * -1)
 #define Y_MAX_POS Y_BED_SIZE + (Y_MIN_POS * -1)
 #define Z_MAX_POS 230
 
@@ -1242,7 +1242,7 @@
  * Normally G28 leaves leveling disabled on completion. Enable
  * this option to have G28 restore the prior leveling state.
  */
-//#define RESTORE_LEVELING_AFTER_G28
+#define RESTORE_LEVELING_AFTER_G28
 
 /**
  * Enable detailed logging of G28, G29, M48, etc.
